@@ -1,0 +1,46 @@
+
+
+//IQ Vision Schedules
+
+//IQ4 & 5 controllers. Be aware if Tonn is present on Niagara network, you may need to remove these schedules before Editing slots as they are engineered dissferently. 
+
+//**Edit just Import**
+station:|slot:/|bql:select * from TrendN4:TrendScheduleImport
+Edit Slot
+Property : schedule
+Boolean Schedule>Facets> trueText=Occupied,falseText=Unoccupied
+
+
+//**Edit Import and _ext schedules**
+station:|slot:/|bql:select * from schedule:BooleanSchedule
+Edit Slot
+Property : schedule
+Boolean Schedule>Facets> trueText=Occupied,falseText=Unoccupied
+
+//**If IQ Vision is to be allowed to edit Schedules**
+station:|slot:/|bql:select * from TrendN4:TrendScheduleExport
+Edit Slot
+Property : matchScheduleImport
+New Value: true
+Property : executionTime
+New Value: 	Trigger mode : Daily
+		Time Of Day : 03:00:00 AM BST (Histories at 2am default)
+		Randomisation : +00000h 10m 00s
+
+
+///IQ Vision History
+
+//**Check history Settings**
+
+station:|slot:/|bql:select * from TrendN4:TrendHistoryImport
+Edit Slot
+Property : executionTime
+New Value: 	Trigger mode : Daily
+		Time Of Day : 02:00:00 AM BST
+		Randomisation : +00000h 10m 00s
+
+station:|slot:/|bql:select * from baja:Component where name like 'configOverrides'
+Edit Slot
+Property : capacity
+New Value: Unilimited
+
