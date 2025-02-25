@@ -1,0 +1,4 @@
+
+#On Controller 
+[%device.lan.system.displayName% | %device.lan.displayName% | %device.displayName%]
+%parent.displayName% [%device.lan.system.displayName% | %device.lan.displayName% | %device.displayName%]
