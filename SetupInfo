@@ -2,6 +2,7 @@
 //For supervisors when setting up the pc do not use microsoft account workbench needs a local administrator login
 //when on the "connect to network" setup page of the wizard enter the following command in CMD (ctrl+F10)
 oobe\bypassnro
+//The PC will reboot and allow you to press "I do not have an internet Connection" to install with Local User account
 
 //IQ Vision Schedules
 
