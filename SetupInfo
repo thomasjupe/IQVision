@@ -1,4 +1,7 @@
-
+//Windows 11 Setup
+//For supervisors when setting up the pc do not use microsoft account workbench needs a local administrator login
+//when on the "connect to network" setup page of the wizard enter the following command in CMD (ctrl+F10)
+oobe\bypassnro
 
 //IQ Vision Schedules
 
