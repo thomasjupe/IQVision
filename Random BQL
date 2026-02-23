@@ -2,3 +2,18 @@
 #On Controller 
 [%device.lan.system.displayName% | %device.lan.displayName% | %device.displayName%]
 %parent.displayName% [%device.lan.system.displayName% | %device.lan.displayName% | %device.displayName%]
+
+
+
+#Show points list of Trend Points in Trend Driver
+ip:[IPADDRESS]|foxs:|station:|slot:/|bql:select * from TrendN4:TrendProxyExt
+
+#List all Trend Import Schedules in Trend Driver
+ip:[IPADDRESS]|foxs:|station:|slot:/|bql:select * from TrendN4:TrendScheduleImport
+
+#List all Trend Export Schedules in Trend Driver
+ip:[IPADDRESS]|foxs:|station:|slot:/|bql:select * from TrendN4:TrendScheduleExport
+
+#List all Trend Histories in Trend Driver
+ip:[IPADDRESS]|foxs:|station:|slot:/|bql:select * from TrendN4:TrendHistoryImport
+
